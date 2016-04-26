@@ -13,6 +13,8 @@
 		245C55791CCF18CE00BCA937 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245C55771CCF18CE00BCA937 /* Main.storyboard */; };
 		245C557B1CCF18CE00BCA937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245C557A1CCF18CE00BCA937 /* Assets.xcassets */; };
 		245C557E1CCF18CE00BCA937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245C557C1CCF18CE00BCA937 /* LaunchScreen.storyboard */; };
+		245C55881CCF1E1600BCA937 /* TSZCircleProgressPercentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245C55871CCF1E1600BCA937 /* TSZCircleProgressPercentView.m */; };
+		245C558B1CCF453900BCA937 /* TSZPercentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245C558A1CCF453900BCA937 /* TSZPercentLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		245C557A1CCF18CE00BCA937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		245C557D1CCF18CE00BCA937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		245C557F1CCF18CE00BCA937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		245C55861CCF1E1600BCA937 /* TSZCircleProgressPercentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZCircleProgressPercentView.h; sourceTree = "<group>"; };
+		245C55871CCF1E1600BCA937 /* TSZCircleProgressPercentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZCircleProgressPercentView.m; sourceTree = "<group>"; };
+		245C55891CCF453900BCA937 /* TSZPercentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZPercentLabel.h; sourceTree = "<group>"; };
+		245C558A1CCF453900BCA937 /* TSZPercentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZPercentLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		245C556D1CCF18CE00BCA937 /* drawProgressAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				245C55851CCF196D00BCA937 /* CircleProgressView */,
 				245C55711CCF18CE00BCA937 /* AppDelegate.h */,
 				245C55721CCF18CE00BCA937 /* AppDelegate.m */,
 				245C55741CCF18CE00BCA937 /* ViewController.h */,
@@ -77,6 +84,17 @@
 				245C556F1CCF18CE00BCA937 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		245C55851CCF196D00BCA937 /* CircleProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				245C55861CCF1E1600BCA937 /* TSZCircleProgressPercentView.h */,
+				245C55871CCF1E1600BCA937 /* TSZCircleProgressPercentView.m */,
+				245C55891CCF453900BCA937 /* TSZPercentLabel.h */,
+				245C558A1CCF453900BCA937 /* TSZPercentLabel.m */,
+			);
+			path = CircleProgressView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +123,7 @@
 		245C55631CCF18CE00BCA937 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TSZ;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = shunzhitang;
 				TargetAttributes = {
@@ -150,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				245C55761CCF18CE00BCA937 /* ViewController.m in Sources */,
+				245C55881CCF1E1600BCA937 /* TSZCircleProgressPercentView.m in Sources */,
+				245C558B1CCF453900BCA937 /* TSZPercentLabel.m in Sources */,
 				245C55731CCF18CE00BCA937 /* AppDelegate.m in Sources */,
 				245C55701CCF18CE00BCA937 /* main.m in Sources */,
 			);
