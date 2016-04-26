@@ -63,6 +63,7 @@
     [self addSubview:self.percentLabel];
     
     self.colors = [NSMutableArray array];
+//    self.percentLabel.text = @"";
 }
 
 /**
@@ -77,8 +78,10 @@
  * @param animatedColors  颜色数组动画。如果这个参数是零，描边色将被用于绘制圆
  */
 
+
 - (void)drawCircleWithPercent:(CGFloat)percent  duration:(CGFloat)duration lineWidth:(CGFloat)lineWidth clockwise:(BOOL)clockwise  lineCap:(NSString *)lineCap fillColor:(UIColor *)fillColor  strokeColor:(UIColor *)strokeColor  animatedColors:(NSArray *)colors{
     
+//    self.percentLabel.text = @"";
     
     self.duration = duration;
     self.percent = percent;
@@ -131,18 +134,34 @@
     self.backgroundLayer.shouldRasterize = YES;
 }
 
-- (void)setupCircleLayerWithStrokeColor:(UIColor *)strokeColor {
+- (void)setupCircleLayerWithStrokeColor:(UIColor *)strokeColors {
     
     CGFloat  endAngle = [self calculateToValueWithPercent:self.percent];
     
     self.circle.path = [ UIBezierPath  bezierPathWithArcCenter:CGPointMake(self.radius, self.radius) radius:self.radius startAngle:kStartAngle endAngle:endAngle clockwise:self.clockwise].CGPath;
+    
     self.circle.position = self.centerPoint;
     
     self.circle.fillColor = [UIColor clearColor].CGColor;
+//
+//    UIColor * currentColor = strokeColors[0];
+//    
+//    if(self.colors != nil)
+//    {
+//        NSUInteger count = [self.colors count];
+//        
+//        int value = (arc4random() % count);
+//        
+//        NSLog(@"value = %d" , value);
+//        
+//        currentColor = self.colors[value];
+//    }
+    self.circle.strokeColor = strokeColors.CGColor;
     
-    self.circle.strokeColor = strokeColor.CGColor;
     self.circle.lineWidth = self.lineWidth;
+    
     self.circle.lineCap = self.lineCap;
+    
     self.circle.shouldRasterize  =  YES;
     
     self.circle.rasterizationScale =  2 * [UIScreen mainScreen].scale;
@@ -150,14 +169,16 @@
 }
 
 - (CGFloat)calculateToValueWithPercent:(CGFloat)percent {
+    
     return (kStartAngle + (percent * 2 * M_PI) / 100);
+    
 }
 
 // 设置显示的信息
 
 - (void)setupPercentLabel{
     
-    
+    self.percentLabel.text = @"";
     // 居中显示
     
     NSLayoutConstraint *centerHor = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.percentLabel attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
@@ -169,7 +190,7 @@
     
     [self layoutIfNeeded];
     
-    self.percentLabel.text = [NSString stringWithFormat:@"%2d%%" ,(int)self.percent];
+    self.percentLabel.text = [NSString stringWithFormat:@"%.2f%%" ,(double)self.percent];
     
 }
 
@@ -224,13 +245,16 @@
     drawAnimation.repeatCount = 1.0;
     
     drawAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    
     drawAnimation.toValue = [NSNumber numberWithFloat:1.0f];
     
     drawAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    
     [self.circle addAnimation:drawAnimation forKey:@"drawCircleAnimation"];
     
     
     CAKeyframeAnimation  *colorsAnimation = [CAKeyframeAnimation animationWithKeyPath:@"strokeColor"];
+    
     colorsAnimation.values = self.colors;
     
     // 进度

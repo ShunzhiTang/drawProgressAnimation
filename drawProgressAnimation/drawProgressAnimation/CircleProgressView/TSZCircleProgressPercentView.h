@@ -13,7 +13,7 @@
 @interface TSZCircleProgressPercentView : UIView
 
 @property (nonatomic ,strong) UILabel *percentLabel;
-@property (nonatomic, strong) NSString *key;
+//@property (nonatomic, strong) NSString *key;
 @property (nonatomic, strong) CAMediaTimingFunction *timingFunction;
 
 /**
