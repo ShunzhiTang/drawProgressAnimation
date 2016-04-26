@@ -15,7 +15,7 @@
 		245C557E1CCF18CE00BCA937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245C557C1CCF18CE00BCA937 /* LaunchScreen.storyboard */; };
 		245C55881CCF1E1600BCA937 /* TSZCircleProgressPercentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245C55871CCF1E1600BCA937 /* TSZCircleProgressPercentView.m */; };
 		245C558B1CCF453900BCA937 /* TSZPercentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245C558A1CCF453900BCA937 /* TSZPercentLabel.m */; };
-		245C55911CCF752C00BCA937 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245C55901CCF752C00BCA937 /* ProgressView.m */; };
+		245C55911CCF752C00BCA937 /* otherProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245C55901CCF752C00BCA937 /* otherProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		245C55871CCF1E1600BCA937 /* TSZCircleProgressPercentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZCircleProgressPercentView.m; sourceTree = "<group>"; };
 		245C55891CCF453900BCA937 /* TSZPercentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZPercentLabel.h; sourceTree = "<group>"; };
 		245C558A1CCF453900BCA937 /* TSZPercentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZPercentLabel.m; sourceTree = "<group>"; };
-		245C558F1CCF752C00BCA937 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
-		245C55901CCF752C00BCA937 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		245C558F1CCF752C00BCA937 /* otherProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = otherProgressView.h; sourceTree = "<group>"; };
+		245C55901CCF752C00BCA937 /* otherProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = otherProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +73,8 @@
 				245C55741CCF18CE00BCA937 /* ViewController.h */,
 				245C55751CCF18CE00BCA937 /* ViewController.m */,
 				245C55771CCF18CE00BCA937 /* Main.storyboard */,
-				245C558F1CCF752C00BCA937 /* ProgressView.h */,
-				245C55901CCF752C00BCA937 /* ProgressView.m */,
+				245C558F1CCF752C00BCA937 /* otherProgressView.h */,
+				245C55901CCF752C00BCA937 /* otherProgressView.m */,
 				245C557A1CCF18CE00BCA937 /* Assets.xcassets */,
 				245C557C1CCF18CE00BCA937 /* LaunchScreen.storyboard */,
 				245C557F1CCF18CE00BCA937 /* Info.plist */,
@@ -178,7 +178,7 @@
 				245C558B1CCF453900BCA937 /* TSZPercentLabel.m in Sources */,
 				245C55731CCF18CE00BCA937 /* AppDelegate.m in Sources */,
 				245C55701CCF18CE00BCA937 /* main.m in Sources */,
-				245C55911CCF752C00BCA937 /* ProgressView.m in Sources */,
+				245C55911CCF752C00BCA937 /* otherProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

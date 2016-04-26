@@ -1,14 +1,14 @@
 //
-//  ProgressView.h
-// 
+//  otherProgressView.h
+//  drawProgressAnimation
 //
-//  Created by 刘通超 on 15/1/7.
-//  Copyright (c) 2015年 刘通超. All rights reserved.
+//  Created by tang on 16/4/26.
+//  Copyright © 2016年 shunzhitang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ProgressView : UIView
+@interface otherProgressView : UIView
 
 //中心颜色
 @property (strong, nonatomic)UIColor *centerColor;

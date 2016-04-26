@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 #import "TSZCircleProgressPercentView.h"
-#import "ProgressView.h"
+#import "otherProgressView.h"
 
 @interface ViewController ()
 
@@ -34,14 +34,12 @@
 
 - (void)setUIPro{
     
-    ProgressView *proView = [[ProgressView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    otherProgressView *proView = [[otherProgressView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     
     proView.center = self.view.center;
     
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        NSURL *url = [NSURL URLWithString:@"http://car0.autoimg.cn/upload/spec/9579/u_20120110174805627264.jpg"];
-//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
         
         for (int i = 0; i <= 23233; i++) {
             
@@ -56,13 +54,7 @@
             });
         }
     });
-    
-    
-//
-//    
-//    proView.percentLabel.font = [UIFont systemFontOfSize:35];
-//    
-//    [proView startAnimation];
+
     
     [self.view addSubview:proView];
     
