@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "TSZPercentLabel.h"
+
 @interface TSZCircleProgressPercentView : UIView
+
+@property (nonatomic ,strong) UILabel *percentLabel;
+@property (nonatomic, strong) NSString *key;
+@property (nonatomic, strong) CAMediaTimingFunction *timingFunction;
 
 /**
  * 基于view 的frame去自动计算半径显示
@@ -25,6 +31,10 @@
 
 - (void)drawCircleWithPercent:(CGFloat)percent  duration:(CGFloat)duration lineWidth:(CGFloat)lineWidth clockwise:(BOOL)clockwise  lineCap:(NSString *)lineCap fillColor:(UIColor *)fillColor  strokeColor:(UIColor *)strokeColor  animatedColors:(NSArray *)colors;
 
+/*
+ * Start draw animation
+ */
+- (void)startAnimation;
 
 
 

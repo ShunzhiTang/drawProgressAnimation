@@ -62,6 +62,8 @@
 }
 @end
 
+
+
 @interface TSZPercentLayer()
 
 @property (nonatomic , assign) CGFloat animatableProperty;
@@ -140,6 +142,7 @@
     
     [self.percentDelegate  layerDidStopAnimation];
 }
+
 
 /* 刷新图层的内容。调用-drawInContext：方法
  *然后更新图层的内容''属性。通常，这是
