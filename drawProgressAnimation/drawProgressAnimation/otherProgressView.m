@@ -66,12 +66,13 @@
         CGFloat radius = viewSize.width / 2;
         CGContextBeginPath(contextRef);
         CGContextMoveToPoint(contextRef, center.x, center.y);
-        CGContextAddArc(contextRef, center.x, center.y, radius, 0,2*M_PI, 0);
+        CGContextAddArc(contextRef, center.x, center.y, radius, -M_PI_2 ,2*M_PI, 0);
         CGContextSetFillColorWithColor(contextRef, color);
         CGContextFillPath(contextRef);
+        
     }else{
         
-        float endAngle = 2*M_PI*_percent;
+        float endAngle = 2 * M_PI * _percent;
         
         CGColorRef color = (_arcUnfinishColor == nil) ? [UIColor blueColor].CGColor : _arcUnfinishColor.CGColor;
         CGContextRef contextRef = UIGraphicsGetCurrentContext();
@@ -81,7 +82,7 @@
         CGFloat radius = viewSize.width / 2;
         CGContextBeginPath(contextRef);
         CGContextMoveToPoint(contextRef, center.x, center.y);
-        CGContextAddArc(contextRef, center.x, center.y, radius, 0,endAngle, 0);
+        CGContextAddArc(contextRef, center.x, center.y, radius, -M_PI_2,endAngle, 0);
         CGContextSetFillColorWithColor(contextRef, color);
         CGContextFillPath(contextRef);
     }
@@ -99,7 +100,7 @@
     CGFloat radius = viewSize.width / 2 - width;
     CGContextBeginPath(contextRef);
     CGContextMoveToPoint(contextRef, center.x, center.y);
-    CGContextAddArc(contextRef, center.x, center.y, radius, 0,2*M_PI, 0);
+    CGContextAddArc(contextRef, center.x, center.y, radius, -M_PI_2, 2*M_PI, 0);
     CGContextSetFillColorWithColor(contextRef, color);
     CGContextFillPath(contextRef);
 }

@@ -13,8 +13,6 @@
 
 @interface ViewController ()
 
-
-
 @end
 
 @implementation ViewController
@@ -29,7 +27,7 @@
     
     [super viewDidAppear:animated];
 
-    [self   setUI];
+//    [self   setUI];
 }
 
 - (void)setUIPro{
@@ -43,7 +41,7 @@
         
         for (int i = 0; i <= 23233; i++) {
             
-            NSLog(@"%zd " , i);
+//            NSLog(@"%zd " , i);
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -64,20 +62,10 @@
 - (void)setUI{
     
     TSZCircleProgressPercentView *proView = [[TSZCircleProgressPercentView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+   
     proView.center = self.view.center;
     
-    
-//    for (int i = 0; i <= 23233; i++) {
-    
-//        NSLog(@"%zd " , i);
-        
-        // 卡一秒执行
-    
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        //        NSURL *url = [NSURL URLWithString:@"http://car0.autoimg.cn/upload/spec/9579/u_20120110174805627264.jpg"];
-        //        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
         
         double totalNumbers = 23233;
         
@@ -87,7 +75,7 @@
             
             double  num = (i / totalNumbers) * 100;
             
-             NSLog(@"%f " , num);
+//             NSLog(@"%f " , num);
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -100,7 +88,7 @@
                                      lineWidth:10
                                      clockwise:YES
                                        lineCap:kCALineCapRound
-                                     fillColor:[UIColor clearColor]
+                                     fillColor:[UIColor whiteColor]
                                    strokeColor:[UIColor orangeColor]
                                 animatedColors:nil];
                 
@@ -122,7 +110,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-//    [self setUI];
+    [self setUI];
 }
 
 @end
