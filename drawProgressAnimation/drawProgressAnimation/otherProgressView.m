@@ -90,6 +90,7 @@
 }
 
 -(void)addCenterBack{
+    
     float width = (_width == 0) ? 5 : _width;
     
     CGColorRef color = (_centerColor == nil) ? [UIColor whiteColor].CGColor : _centerColor.CGColor;

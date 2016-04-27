@@ -13,6 +13,8 @@
 
 @interface ViewController ()
 
+
+
 @end
 
 @implementation ViewController
@@ -40,8 +42,6 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         for (int i = 0; i <= 23233; i++) {
-            
-//            NSLog(@"%zd " , i);
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -71,7 +71,7 @@
         
         for (int i = 0; i <= totalNumbers ; i++) {
             
-           
+//           NSLog(@"%zd " , i);
             
             double  num = (i / totalNumbers) * 100;
             
